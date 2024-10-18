@@ -1,0 +1,48 @@
+<script>
+
+    const numberOne = Number(prompt(`Informe um número`).replace(",", "."));
+    const numberTwo = Number(prompt(`Informe mais um número`).replace(",", "."));
+    const operacao = prompt(`Informe a operação que deseja usar(+, -, *, /)`);
+
+    let resultado;
+    let parImpar;
+    let positivoNegativo;
+    let inteiroDecimal;
+
+    switch (operacao) {
+        case "+":
+            resultado = numberOne + numberTwo;
+            break;
+        case "-":
+            resultado = numberOne - numberTwo;
+            break;
+        case "*":
+            resultado = numberOne * numberTwo;
+            break;
+        case "/":
+            resultado = numberOne / numberTwo;
+            break;
+        default:
+            alert(`Informe uma operação válida!`)
+    }
+    if (resultado % 2 == 0) {
+        parImpar = "par"
+    } else {
+        parImpar = "ímpar"
+    } if (resultado >= 0) {
+        positivoNegativo = "positivo"
+    } else {
+        positivoNegativo = "negativo"
+    } if (Number.isInteger(resultado)) {
+        inteiroDecimal = "inteiro"
+    } else {
+        inteiroDecimal = "decimal"
+    }
+
+    document.write(`O resultado da operação é: ${resultado} <br>
+    esse número é ${parImpar} <br>
+    também é ${positivoNegativo} <br>
+    e é ${inteiroDecimal}`)
+
+
+</script>
